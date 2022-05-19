@@ -13,7 +13,8 @@ async function main() {
         //pero para que los reconozca es necesario importar el modelo
         await sequelize.sync({force: false});
         console.log("Coneccion establecida con exito");
-        app.listen(3000);
+        const PORT = process.env.PORT || 3000;
+        app.listen(PORT);
     
         console.log("servidor corriendo en el puerto", 3000);
     } catch (error) {
