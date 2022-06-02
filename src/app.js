@@ -7,12 +7,7 @@ const app = express();
 //añadir middlewares para poder entender los objetos json
 //que me puede enviar el cliente en formato body
 app.use(express.json());
-app.use(
-    cors({
-        origin: "http://localhost:3000", 
-        credentials: true,
-    })
-);
+
 app.use(projectsRoutes);
 app.use(tasksRoutes);
 
