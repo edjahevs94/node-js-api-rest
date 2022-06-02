@@ -16,7 +16,7 @@ async function main() {
         var PORT = process.env.PORT || 3000;
         app.listen(PORT);
     
-        console.log("servidor corriendo en el puerto", 3000);
+        console.log("servidor corriendo en el puerto", PORT);
     } catch (error) {
         console.error('No se pudo conectar a la base de datos:', error);
     }
