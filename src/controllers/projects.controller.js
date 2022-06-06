@@ -71,7 +71,7 @@ export const updateProject = async (req,res) => {
         project.description = description;
         //para guardar las modificaciones al objeto en la base de datos
         await project.save();
-        res.json(project);
+        res.json({message: "Project Updated"});
     } catch (error) {
        return res.status(500).json({message: error.message}); 
     }
@@ -87,7 +87,7 @@ export const deleteProject = async (req,res) => {
                 id : id
             }
         });
-        res.sendStatus(204);
+        res.json({message: "Project Deleted"});
         
     } catch (error) {
         return res.status(500).json({message : error.message})
